@@ -20,6 +20,7 @@ export default [
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...reactRefresh.configs.vite.rules,
+      'no-unused-vars': 'off',
     },
   },
 ]
