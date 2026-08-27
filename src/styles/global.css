@@ -1431,3 +1431,117 @@ p {
   font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.7;
 }
+
+.team {
+  background: #f2f5ff;
+  color: #09112a;
+}
+
+.team .eyebrow {
+  color: #2146e8;
+}
+
+.team-heading {
+  display: grid;
+  margin-bottom: 4rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 3rem;
+}
+
+.team-heading .section-title {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.team-heading > p {
+  max-width: 360px;
+  margin: 0 0 0.6rem auto;
+  color: #53617d;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.team-member {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: minmax(300px, 1fr) auto;
+  grid-column: span 4;
+  border: 1px solid rgba(9, 17, 42, 0.12);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.member-portrait {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  background:
+    radial-gradient(circle at 48% 40%, rgba(145, 233, 255, 0.34), transparent 24%),
+    linear-gradient(145deg, #0d1c4a, #2146e8 62%, #55154f);
+}
+
+.member-portrait::after {
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  content: '';
+}
+
+.member-portrait span {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: clamp(3.4rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.member-portrait i {
+  position: absolute;
+  border: 1px solid rgba(145, 233, 255, 0.22);
+  border-radius: 50%;
+}
+
+.member-portrait i:first-of-type { width: 72%; aspect-ratio: 1; }
+.member-portrait i:last-of-type { width: 38%; aspect-ratio: 1; }
+
+.member-info {
+  padding: 1.5rem;
+}
+
+.member-info > span {
+  display: block;
+  margin-bottom: 1.4rem;
+  color: #2146e8;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.member-info h3 {
+  min-height: 3.3em;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.member-info p {
+  margin-bottom: 1.5rem;
+  color: #65708b;
+  font-size: 0.78rem;
+}
+
+.member-info strong {
+  color: #09112a;
+  font-size: 0.66rem;
+  font-weight: 500;
+}
