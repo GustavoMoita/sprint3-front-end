@@ -1,0 +1,160 @@
+:root {
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: #f7f8ff;
+  background: #050814;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #050814;
+  --navy: #07112e;
+  --royal: #234cff;
+  --electric: #5b8cff;
+  --cyan: #91e9ff;
+  --pink: #ff3da4;
+  --white: #f7f8ff;
+  --muted: #a8b2cf;
+  --line: rgba(255, 255, 255, 0.14);
+  --panel: rgba(255, 255, 255, 0.06);
+  --page: min(1180px, calc(100% - 48px));
+  --mono: 'DM Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ink);
+  scroll-padding-top: 96px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 82% 4%, rgba(35, 76, 255, 0.2), transparent 28rem),
+    var(--ink);
+}
+
+body::selection {
+  color: var(--white);
+  background: var(--royal);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.container {
+  width: var(--page);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(6rem, 11vw, 10rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+  color: var(--cyan);
+  font: 500 0.72rem/1 var(--mono);
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 2.1rem;
+  height: 1px;
+  background: currentColor;
+  content: '';
+}
+
+.section-title {
+  max-width: 900px;
+  margin-bottom: 1.4rem;
+  font-size: clamp(2.5rem, 6vw, 5.7rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.section-copy {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.accent {
+  color: var(--cyan);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--white);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
