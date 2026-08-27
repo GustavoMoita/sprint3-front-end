@@ -808,3 +808,213 @@ p {
   color: #53617d;
   line-height: 1.6;
 }
+
+.camera-demo {
+  background:
+    radial-gradient(circle at 20% 35%, rgba(35, 76, 255, 0.18), transparent 30rem),
+    #060a18;
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.7fr);
+  align-items: center;
+  gap: clamp(3rem, 10vw, 9rem);
+}
+
+.mode-tabs {
+  display: grid;
+  max-width: 560px;
+  margin-top: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.mode-tabs button {
+  display: grid;
+  padding: 1.15rem 0.4rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  background: transparent;
+  grid-template-columns: 4rem 1fr;
+  text-align: left;
+  cursor: pointer;
+  transition: color 200ms ease, padding-left 200ms ease, background 200ms ease;
+}
+
+.mode-tabs button:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.mode-tabs button:hover,
+.mode-tabs button.is-active {
+  padding-left: 0.8rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.mode-tabs button.is-active .mono {
+  color: var(--cyan);
+}
+
+.mode-tabs .mono {
+  color: #65708f;
+  font-size: 0.62rem;
+}
+
+.demo-device-column {
+  position: relative;
+}
+
+.demo-device {
+  position: relative;
+  width: min(100%, 390px);
+  aspect-ratio: 9 / 17.4;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 8px solid #02040b;
+  border-radius: 3.5rem;
+  background: #07112e;
+  box-shadow: 0 45px 110px rgba(0, 0, 0, 0.6), 0 0 0 1px #53617d;
+}
+
+.demo-device > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 400ms ease, transform 800ms ease;
+}
+
+.demo-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(3, 7, 20, 0.55), transparent 35%, rgba(3, 7, 20, 0.16) 52%, rgba(3, 7, 20, 0.88));
+}
+
+.demo-ui {
+  position: absolute;
+  inset: 0;
+}
+
+.demo-status {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.demo-focus {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.context-chip {
+  --mode-color: var(--cyan);
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  display: flex;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--mode-color) 45%, transparent);
+  border-radius: 999px;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--mode-color);
+  background: rgba(3, 7, 20, 0.7);
+  backdrop-filter: blur(12px);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.context-chip span {
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+}
+
+.demo-description {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 7rem;
+  left: 1.5rem;
+}
+
+.demo-description > span {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--cyan);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+}
+
+.demo-description strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.demo-description p {
+  margin-bottom: 0;
+  color: #d5daea;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.capture-button {
+  position: absolute;
+  z-index: 4;
+  bottom: 1.5rem;
+  left: 50%;
+  display: grid;
+  width: 4.3rem;
+  aspect-ratio: 1;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.capture-button span {
+  border-radius: 50%;
+  background: white;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.capture-button:active span {
+  background: var(--cyan);
+  transform: scale(0.82);
+}
+
+.capture-toast {
+  position: absolute;
+  z-index: 6;
+  right: 1.2rem;
+  bottom: 7rem;
+  left: 1.2rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(145, 233, 255, 0.22);
+  border-radius: 0.8rem;
+  color: #dffaff;
+  background: rgba(3, 7, 20, 0.85);
+  backdrop-filter: blur(12px);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.demo-note {
+  margin: 1.25rem 0 0;
+  color: #6f7a98;
+  font-size: 0.55rem;
+  letter-spacing: 0.09em;
+  text-align: center;
+}
