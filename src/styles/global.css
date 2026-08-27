@@ -48,6 +48,11 @@ textarea {
   font: inherit;
 }
 
+:where(a, button, input, textarea):focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -2160,5 +2165,43 @@ p {
 
   .timeline-content li button {
     font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .problem-stage,
+  .timeline-sticky,
+  .impact-sticky {
+    position: relative;
+    top: auto;
+  }
+
+  .problem,
+  .audience,
+  .impact {
+    min-height: auto;
+    height: auto;
+  }
+
+  .impact-sticky {
+    min-height: 85vh;
+  }
+
+  .gallery-item:hover > img,
+  .timeline-content li.is-active button {
+    transform: none;
   }
 }
