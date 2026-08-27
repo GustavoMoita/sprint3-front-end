@@ -1,12 +1,13 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-export default function Reveal({ children, className = '', delay = 0, direction = 'up', as = 'div' }) {
+export default function Reveal({ children, className = '', delay = 0, direction = 'up', as = 'div', ...props }) {
   const reduceMotion = useReducedMotion()
   const Component = motion[as]
   const offset = direction === 'up' ? { y: 34 } : { x: direction === 'left' ? 34 : -34 }
 
   return (
     <Component
+      {...props}
       className={className}
       initial={reduceMotion ? false : { opacity: 0, ...offset }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}

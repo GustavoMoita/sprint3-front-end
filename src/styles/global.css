@@ -1545,3 +1545,109 @@ p {
   font-size: 0.66rem;
   font-weight: 500;
 }
+
+.contact {
+  background:
+    radial-gradient(circle at 18% 60%, rgba(35, 76, 255, 0.25), transparent 30rem),
+    #07102a;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 0.75fr);
+  grid-template-rows: auto;
+  gap: clamp(4rem, 11vw, 10rem);
+}
+
+.contact-stamp {
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: 3rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  color: #7d88a6;
+  font-size: 0.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+.contact-stamp span {
+  display: grid;
+  aspect-ratio: 1;
+  grid-row: 1 / 3;
+  place-items: center;
+  border: 1px solid rgba(145, 233, 255, 0.35);
+  border-radius: 50%;
+  color: var(--cyan);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.7rem;
+}
+
+.field {
+  position: relative;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.field label {
+  color: #b4bed8;
+  font: 0.63rem var(--mono);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.85rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0;
+  outline: none;
+  color: white;
+  background: transparent;
+  resize: vertical;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 1px 0 var(--cyan);
+}
+
+.field [aria-invalid='true'] {
+  border-color: #ff78b9;
+}
+
+.field small {
+  color: #ff9dcb;
+  font-size: 0.72rem;
+}
+
+.character-count {
+  position: absolute;
+  right: 0;
+  bottom: 0.7rem;
+  color: #66708e;
+  font-size: 0.55rem;
+}
+
+.button-send {
+  width: fit-content;
+  padding-inline: 1.5rem;
+  color: #07102a;
+  background: var(--cyan);
+  box-shadow: 0 0 40px rgba(145, 233, 255, 0.16);
+}
+
+.form-status {
+  min-height: 2.6em;
+  margin: -0.5rem 0 0;
+  color: var(--cyan);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
