@@ -1651,3 +1651,64 @@ p {
   font-size: 0.72rem;
   line-height: 1.5;
 }
+
+.footer {
+  padding: 5rem 0 2rem;
+  border-top: 1px solid var(--line);
+  background: #050814;
+}
+
+.footer-top {
+  display: flex;
+  padding-bottom: 4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: clamp(1.7rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.footer-brand i {
+  color: var(--cyan);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.footer-top nav {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.8rem 2rem;
+}
+
+.footer-top nav a {
+  color: var(--muted);
+  font-size: 0.75rem;
+  transition: color 200ms ease;
+}
+
+.footer-top nav a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  display: grid;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1rem;
+  color: #626c88;
+  font-size: 0.55rem;
+  letter-spacing: 0.09em;
+}
+
+.footer-bottom a {
+  color: var(--cyan);
+}
