@@ -1377,3 +1377,57 @@ p {
   border: 2px solid white;
   border-radius: 50%;
 }
+
+.impact {
+  position: relative;
+  height: 180vh;
+  min-height: 1150px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(35, 76, 255, 0.19), transparent 33rem),
+    #050814;
+}
+
+.impact-sticky {
+  position: sticky;
+  top: 0;
+  display: grid;
+  width: var(--page);
+  height: 100vh;
+  margin-inline: auto;
+  place-content: center;
+  text-align: center;
+}
+
+.impact-line {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.impact-line-first {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(247, 248, 255, 0.65);
+}
+
+.impact-line-second em {
+  color: var(--cyan);
+  font-style: normal;
+}
+
+.impact-divider {
+  display: block;
+  width: min(520px, 75%);
+  height: 1px;
+  margin: 2.5rem auto;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+}
+
+.impact-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+}
