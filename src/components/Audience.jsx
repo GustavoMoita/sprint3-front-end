@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { moments } from '../data/content'
-import liaPhoto from '../assets/lia-campus.webp'
+import { modeAlts, modeImages } from '../data/modeImages'
 import Reveal from './Reveal'
 
 export default function Audience() {
@@ -36,7 +36,18 @@ export default function Audience() {
       <div className="container timeline-shell">
         <div className="timeline-sticky">
           <figure className="persona-visual">
-            <img src={liaPhoto} alt="Lia, persona universitária, caminhando pelo campus" loading="lazy" />
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.img
+                key={active.id}
+                src={modeImages[active.id]}
+                alt={modeAlts[active.id]}
+                loading="lazy"
+                initial={{ opacity: 0, scale: 1.035 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.45 }}
+              />
+            </AnimatePresence>
             <div className={`persona-tone tone-${active.id}`} />
             <figcaption className="mono">UM DIA COM LIA / {active.time}</figcaption>
           </figure>

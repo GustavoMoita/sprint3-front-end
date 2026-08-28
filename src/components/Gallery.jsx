@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { moments } from '../data/content'
-import liaPhoto from '../assets/lia-campus.webp'
-import Icon from './Icon'
+import { modeAlts, modeImages } from '../data/modeImages'
 import Reveal from './Reveal'
 
 export default function Gallery() {
@@ -26,19 +25,7 @@ export default function Gallery() {
             transition={{ delay: index * 0.08, duration: 0.7 }}
             whileHover={{ y: -6 }}
           >
-            {index === 1 || index === 3 ? (
-              <div className={`gallery-ui gallery-ui-${moment.id}`} aria-label={`Interface conceitual no momento ${moment.title}`}>
-                <div className="gallery-ui-top mono"><span>{moment.time}</span><span>AUTO</span></div>
-                <Icon name="focus" size={62} />
-                <div className="gallery-ui-bottom"><span className="mono">{moment.title}</span><i /></div>
-              </div>
-            ) : (
-              <img
-                src={liaPhoto}
-                alt={index === 0 ? 'Estudante no campus durante a rotina de aula' : 'Registro noturno da rotina universitária'}
-                loading="lazy"
-              />
-            )}
+            <img src={modeImages[moment.id]} alt={modeAlts[moment.id]} loading="lazy" />
             <div className="gallery-overlay" />
             <figcaption>
               <span className="mono">{moment.index} — {moment.time}</span>

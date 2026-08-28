@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cameraModes } from '../data/content'
+import { modeAlts, modeImages } from '../data/modeImages'
 import { usePersistedState } from '../hooks/usePersistedState'
 import Icon from './Icon'
 import Reveal from './Reveal'
-import liaPhoto from '../assets/lia-campus.webp'
 
 export default function CameraDemo() {
   const [activeId, setActiveId] = usePersistedState('humanly-camera-mode', 'aula')
@@ -45,7 +45,18 @@ export default function CameraDemo() {
 
         <Reveal className="demo-device-column" delay={0.15} direction="left">
           <div className="demo-device" id="camera-preview" role="tabpanel" aria-live="polite">
-            <img src={liaPhoto} alt="Prévia conceitual da câmera no contexto universitário" loading="lazy" />
+            <AnimatePresence initial={false} mode="popLayout">
+              <motion.img
+                key={activeId}
+                src={modeImages[activeId]}
+                alt={modeAlts[activeId]}
+                loading="lazy"
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.45 }}
+              />
+            </AnimatePresence>
             <div className="demo-shade" />
             <AnimatePresence mode="wait">
               <motion.div

@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import Icon from './Icon'
-import liaPhoto from '../assets/lia-campus.webp'
+import { modeImages } from '../data/modeImages'
 
 const headline = ['A VIDA NÃO', 'ESPERA O', 'MODO CERTO.']
 
@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="hero-device-glow" aria-hidden="true" />
           <div className="phone-frame">
             <div className="phone-screen">
-              <img src={liaPhoto} alt="Estudante universitária no campus segurando um smartphone" fetchPriority="high" />
+              <img src={modeImages.campus} alt="Lia caminhando com amigos no campus" fetchPriority="high" />
               <div className="camera-top mono"><span>22:01</span><span>HDR · AUTO</span></div>
               <div className="focus-bracket" aria-hidden="true"><Icon name="focus" size={54} /></div>
               <div className="camera-bottom">
