@@ -94,5 +94,5 @@ Os mesmos dados estão no arquivo obrigatório `INTEGRANTES.TXT` na raiz do proj
 
 ## Links
 
-- Repositório: https://github.com/GustavoMoita/sprint3-front-end
-- Deploy no GitHub Pages: https://gustavomoita.github.io/sprint3-front-end/
+- Repositório: [github.com/GustavoMoita/sprint3-front-end](https://github.com/GustavoMoita/sprint3-front-end)
+- Site publicado: [gustavomoita.github.io/sprint3-front-end](https://gustavomoita.github.io/sprint3-front-end/)
