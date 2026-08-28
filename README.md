@@ -95,4 +95,4 @@ Os mesmos dados estão no arquivo obrigatório `INTEGRANTES.TXT` na raiz do proj
 ## Links
 
 - Repositório: https://github.com/GustavoMoita/sprint3-front-end
-- Deploy na Vercel: não configurado nesta entrega local.
+- Deploy no GitHub Pages: https://gustavomoita.github.io/sprint3-front-end/
