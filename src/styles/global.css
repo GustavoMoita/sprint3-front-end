@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Segoe UI', Arial, system-ui, sans-serif;
   color: #f7f8ff;
   background: #050814;
   font-synthesis: none;
@@ -15,7 +15,7 @@
   --line: rgba(255, 255, 255, 0.14);
   --panel: rgba(255, 255, 255, 0.06);
   --page: min(1180px, calc(100% - 48px));
-  --mono: 'DM Mono', monospace;
+  --mono: 'Cascadia Mono', 'Consolas', monospace;
 }
 
 * {

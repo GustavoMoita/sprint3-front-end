@@ -55,7 +55,7 @@ export default function Contact() {
           </div>
           <div className="field">
             <label htmlFor="message">Mensagem</label>
-            <textarea id="message" name="message" rows="4" value={form.message} onChange={updateField} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
+            <textarea id="message" name="message" rows="4" maxLength="500" value={form.message} onChange={updateField} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} />
             <span className="character-count mono">{form.message.length} / 500</span>
             {errors.message && <small id="message-error" role="alert">{errors.message}</small>}
           </div>
